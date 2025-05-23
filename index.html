@@ -25,4 +25,88 @@
 
         /* Features Section */
         .features { display: flex; justify-content: space-between; gap: 30px; margin-top: 60px; flex-wrap: wrap; }
-        .feature { background-color: #f8f8f8; border-radius: 10px; padding: 30px; width: 30%; text-align: center; box-
+        .feature { background-color: #f8f8f8; border-radius: 10px; padding: 30px; width: 30%; text-align: center; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); }
+        .feature h3 { color: #003366; font-size: 1.8rem; margin-bottom: 15px; }
+        .feature p { font-size: 1rem; color: #555; }
+
+        /* Testimonials Section */
+        .testimonials { text-align: center; margin-top: 80px; }
+        .testimonials h2 { font-size: 2.5rem; color: #003366; }
+        .testimonial-container { display: flex; justify-content: center; gap: 40px; margin-top: 30px; }
+        .testimonial { width: 300px; padding: 20px; background-color: #f1f1f1; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); }
+        .testimonial h3 { font-size: 1.3rem; color: #003366; margin-bottom: 10px; }
+        .testimonial p { font-size: 1rem; color: #666; }
+
+        /* Footer */
+        footer { background-color: #003366; color: white; padding: 30px 20px; text-align: center; font-size: 1rem; margin-top: 100px; }
+        footer a { color: #ff6600; font-weight: bold; }
+
+        /* Mobile responsiveness */
+        @media screen and (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            header p { font-size: 1rem; }
+            .cta-button { padding: 12px 30px; font-size: 1.1rem; }
+            .features { flex-direction: column; align-items: center; }
+            .feature { width: 80%; }
+            .testimonial-container { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Jerry Chargeback Management</h1>
+        <p>Effortlessly track, dispute, and resolve chargebacks to protect your revenue.</p>
+    </div>
+</header>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Start Managing Chargebacks Today!</h2>
+        <p>Automate your chargeback management process and save time, reduce losses, and increase revenue.</p>
+        <button class="cta-button" onclick="window.location.href='#signup'">Start Your Free Trial</button>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <div class="feature">
+            <h3>Track Chargebacks</h3>
+            <p>Monitor chargeback activities in real-time, with automatic logging and notifications.</p>
+        </div>
+        <div class="feature">
+            <h3>Dispute Management</h3>
+            <p>Easily submit disputes with the necessary evidence, track their progress, and get updates.</p>
+        </div>
+        <div class="feature">
+            <h3>Customizable Reports</h3>
+            <p>Generate tailored reports that help you understand trends and improve your chargeback strategy.</p>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="container">
+        <h2>What Our Customers Are Saying</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <h3>John D., E-Commerce Business</h3>
+                <p>"Jerry has saved me hours every week. The automated tracking and dispute system is fantastic!"</p>
+            </div>
+            <div class="testimonial">
+                <h3>Lisa M., Subscription Service</h3>
+                <p>"We've reduced chargeback-related losses by 40% in just two months. Highly recommend!"</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Jerry | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
