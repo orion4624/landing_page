@@ -3,110 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Automated chargeback management system for e-commerce and SaaS businesses. Track, dispute, and resolve chargebacks effortlessly.">
-    <title>Jerry - Chargeback Management SaaS</title>
+    <title>Cylos Investigations - Expert Fraud Investigation & Recovery</title>
     <style>
-        /* General Styles */
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box; }
-        a { text-decoration: none; color: inherit; }
-        h1, h2, h3 { margin: 0; }
-        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 20px; }
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        /* Header */
-        header { background-color: #003366; color: white; padding: 40px 0; text-align: center; }
-        header h1 { font-size: 3rem; }
-        header p { font-size: 1.2rem; margin-top: 10px; }
+        body {
+            font-family: 'Arial', sans-serif; /* Consider a more modern font */
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
 
-        /* CTA Section */
-        .cta-section { background-color: #ff6600; color: white; text-align: center; padding: 60px 20px; margin-top: 50px; }
-        .cta-section h2 { font-size: 2.5rem; }
-        .cta-button { background-color: #ffffff; color: #003366; font-size: 1.2rem; padding: 15px 40px; border-radius: 5px; margin-top: 20px; transition: background-color 0.3s; }
-        .cta-button:hover { background-color: #ff4500; color: white; }
+        .container {
+            width: 80%;
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
 
-        /* Features Section */
-        .features { display: flex; justify-content: space-between; gap: 30px; margin-top: 60px; flex-wrap: wrap; }
-        .feature { background-color: #f8f8f8; border-radius: 10px; padding: 30px; width: 30%; text-align: center; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); }
-        .feature h3 { color: #003366; font-size: 1.8rem; margin-bottom: 15px; }
-        .feature p { font-size: 1rem; color: #555; }
+        header {
+            background: #333; /* Dark background for prominence */
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            border-bottom: #0779e4 3px solid; /* Accent color */
+        }
 
-        /* Testimonials Section */
-        .testimonials { text-align: center; margin-top: 80px; }
-        .testimonials h2 { font-size: 2.5rem; color: #003366; }
-        .testimonial-container { display: flex; justify-content: center; gap: 40px; margin-top: 30px; }
-        .testimonial { width: 300px; padding: 20px; background-color: #f1f1f1; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); }
-        .testimonial h3 { font-size: 1.3rem; color: #003366; margin-bottom: 10px; }
-        .testimonial p { font-size: 1rem; color: #666; }
+        header .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+        }
 
-        /* Footer */
-        footer { background-color: #003366; color: white; padding: 30px 20px; text-align: center; font-size: 1rem; margin-top: 100px; }
-        footer a { color: #ff6600; font-weight: bold; }
+        header .logo-container img {
+            max-height: 80px; /* Adjust as needed */
+            margin-right: 15px;
+        }
 
-        /* Mobile responsiveness */
-        @media screen and (max-width: 768px) {
-            header h1 { font-size: 2.5rem; }
-            header p { font-size: 1rem; }
-            .cta-button { padding: 12px 30px; font-size: 1.1rem; }
-            .features { flex-direction: column; align-items: center; }
-            .feature { width: 80%; }
-            .testimonial-container { flex-direction: column; align-items: center; }
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem; /* Space below logo/name */
+        }
+
+        .main-content {
+            padding: 3rem 0;
+        }
+
+        .section {
+            background: #fff;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #0779e4; /* Accent color for headings */
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .value-proposition p {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .offer-details ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 1.5rem;
+        }
+
+        .offer-details ul li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 2rem 0; /* More padding for CTA section */
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #0779e4; /* Prominent button color */
+            color: #fff;
+            padding: 1rem 2.5rem;
+            font-size: 1.3rem;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            background: #0056b3; /* Darker shade on hover */
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info a {
+            color: #0779e4;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #222; /* Darker footer */
+            color: #ccc;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem; /* Ensure space before footer */
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #0779e4; /* Accent color for links */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .logo-container img {
+                max-height: 60px;
+            }
+            .container {
+                width: 95%;
+            }
+            .value-proposition p {
+                font-size: 1.2rem;
+            }
+            .section h2 {
+                font-size: 1.6rem;
+            }
+            .cta-button {
+                font-size: 1.1rem;
+                padding: 0.8rem 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <h1>Jerry Chargeback Management</h1>
-        <p>Effortlessly track, dispute, and resolve chargebacks to protect your revenue.</p>
-    </div>
-</header>
-
-<section class="cta-section">
-    <div class="container">
-        <h2>Start Managing Chargebacks Today!</h2>
-        <p>Automate your chargeback management process and save time, reduce losses, and increase revenue.</p>
-        <button class="cta-button" onclick="window.location.href='#signup'">Start Your Free Trial</button>
-    </div>
-</section>
-
-<section class="features">
-    <div class="container">
-        <div class="feature">
-            <h3>Track Chargebacks</h3>
-            <p>Monitor chargeback activities in real-time, with automatic logging and notifications.</p>
-        </div>
-        <div class="feature">
-            <h3>Dispute Management</h3>
-            <p>Easily submit disputes with the necessary evidence, track their progress, and get updates.</p>
-        </div>
-        <div class="feature">
-            <h3>Customizable Reports</h3>
-            <p>Generate tailored reports that help you understand trends and improve your chargeback strategy.</p>
-        </div>
-    </div>
-</section>
-
-<section class="testimonials">
-    <div class="container">
-        <h2>What Our Customers Are Saying</h2>
-        <div class="testimonial-container">
-            <div class="testimonial">
-                <h3>John D., E-Commerce Business</h3>
-                <p>"Jerry has saved me hours every week. The automated tracking and dispute system is fantastic!"</p>
-            </div>
-            <div class="testimonial">
-                <h3>Lisa M., Subscription Service</h3>
-                <p>"We've reduced chargeback-related losses by 40% in just two months. Highly recommend!"</p>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="Cylos Investigations Logo">
+                <h1>Cylos Investigations</h1>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<footer>
-    <div class="container">
-        <p>&copy; 2025 Jerry | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+    <div class="main-content container">
+
+        <section class="section value-proposition">
+            <h2>Your Shield Against Trading Scams</h2>
+            <p>Expert Fraud Investigation & Recovery Roadmaps for Trading Scam Victims.</p>
+        </section>
+
+        <section id="first-client-offer" class="section offer-details">
+            <h2>Our First Client Offer: Cylos Initial Fraud Assessment & Recovery Roadmap</h2>
+            <p>Understanding the full scope of a trading scam and outlining potential recovery avenues is the critical first step. Our specialized initial service provides you with:</p>
+            <ul>
+                <li><strong>Comprehensive Case Review:</strong> We meticulously analyze all provided evidence, communications, and transaction histories related to the scam.</li>
+                <li><strong>Fraud Mechanism Identification:</strong> Pinpointing the exact methods used by the fraudsters to build a stronger case.</li>
+                <li><strong>Preliminary Asset Tracing Insights:</strong> Initial exploration of where your funds may have been moved (where feasible and based on available information).</li>
+                <li><strong>Detailed Recovery Options Report:</strong> A clear outline of potential legal, regulatory, and other recovery pathways available to you.</li>
+                <li><strong>Actionable Recovery Roadmap:</strong> A step-by-step plan tailored to your specific situation, guiding you on the next best actions.</li>
+                <li><strong>Resource Compilation:</strong> Information on relevant authorities, consumer protection agencies, and legal support if required.</li>
+            </ul>
+            <p>This assessment empowers you with knowledge and a clear direction, even if you choose not to engage our services further for the full recovery process.</p>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to Take the First Step?</h2>
+            <a href="#" class="cta-button">Schedule Your Free Initial Consultation</a>
+            </section>
+
+        <section id="contact" class="section contact-info">
+            <h2>Contact Us</h2>
+            <p><strong>Email:</strong> <a href="mailto:your.professional.email@example.com">your.professional.email@example.com</a></p>
+            <p><strong>Phone:</strong> +44 XXXXXXXXXX / +353 XXXXXXXXX (Your Business Phone Number - Optional)</p>
+            <p>Operating from the UK with an Irish LTD.</p>
+        </section>
+
     </div>
-</footer>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Cylos Investigations. All Rights Reserved.</p>
+            <p>
+                <a href="terms-of-service.html">Terms of Service</a> |
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </p>
+            <p style="font-size: 0.8rem; margin-top: 10px;">
+                Cylos Investigations is a trading name of [Your Irish LTD Company Name], registered in Ireland, Company Number: [Your Company Number].
+                We operate in compliance with EU (GDPR) and UK data protection regulations.
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>
